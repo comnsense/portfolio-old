@@ -1,178 +1,1066 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <title>Home</title>
-
-        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-
-        <meta charset="UTF-8">
-
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-     
-
-    </head>
-        <link rel="stylesheet" href="./css/main2.css" type="text/css">
-        <link rel="stylesheet" href="./css/header.css" type="text/css">
-        <link rel="stylesheet" href="./css/home.css" type="text/css">
-        <link rel="stylesheet" href="./css/about.css" type="text/css">
-        <link rel="stylesheet" href="./css/footer.css" type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects 2022-26 | comnsense</title>
     
-    </head> 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-    <body>
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Projects 2022-26" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comnsense.github.io/projects" />
+    <meta property="og:description" content="Web development projects and applications" />
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://comnsense.github.io/projects" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Fira+Code:wght@400;500&family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-          
+    <!-- Font Awesome Icons (single instance) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Material Icons for fallback -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-bg: #0a0c14;
+            --secondary-bg: #1a1f2e;
+            --accent-green: #8bc34a;
+            --accent-blue: #42a5f5;
+            --text-light: #ffffff;
+            --text-dark: #1D263B;
+            --terminal-bg: rgba(25, 40, 50, 0.3);
+            --card-bg: rgba(20, 30, 40, 0.4);
+            --border-color: #2a4a5a;
+            --hover-color: #a5d6a5;
+            --header-bg: rgba(10, 15, 25, 0.95);
+            --text-primary: #ffffff;
+        }
+
+        /* Light theme */
+        [data-theme="light"] {
+            --primary-bg: #f8f9fa;
+            --secondary-bg: #ffffff;
+            --text-light: #1a1a2e;
+            --text-dark: #16213e;
+            --accent-green: #2e7d32;
+            --accent-blue: #1976d2;
+            --border-color: #bbdefb;
+            --card-bg: rgba(200, 220, 240, 0.3);
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --text-primary: #1a1a2e;
+        }
+
+        /* Global Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: var(--primary-bg);
+            min-height: 100vh;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5 {
+            font-family: 'Fira Mono', monospace;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: var(--text-light);
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .green {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .hyperlink {
+            color: var(--accent-blue);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .hyperlink:hover {
+            color: var(--hover-color);
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-green);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--accent-green);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
+            color: var(--hover-color);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .toggle {
+            display: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        .toggle:hover {
+            color: var(--accent-green);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-item a {
+            color: var(--text-light);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item a:hover {
+            color: var(--accent-green);
+            border-bottom-color: var(--accent-green);
+        }
+
+        /* Theme Preview Circles */
+        .theme-preview {
+            display: flex;
+            gap: 10px;
+            margin-left: 20px;
+        }
+        
+        .color-dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .color-dot:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+        
+        .color-dot.active {
+            border-color: var(--accent-green);
+            transform: scale(1.1);
+        }
+        
+        .dot-dark { background-color: #0a0c14; }
+        .dot-light { background-color: #f8f9fa; border: 2px solid #666; }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1400px;
+            margin: 100px auto 50px;
+            padding: 0 30px;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-description {
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: var(--text-light);
+            opacity: 0.9;
+        }
+
+        /* Projects Grid */
+        .card-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .card-title img {
+            width: 30px;
+            height: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-green);
+        }
+
+        .project-preview-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .card-info {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            line-height: 1.4;
+        }
+
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .skill-tag {
+            background: rgba(57, 121, 146, 0.3);
+            border: 1px solid var(--border-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: var(--text-light);
+        }
+
+        .item-details {
+            margin: 15px 0;
+            color: var(--text-light);
+            opacity: 0.9;
+            flex: 1;
+        }
+
+        .item-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .item-details li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .item-details li::before {
+            content: "•";
+            color: var(--accent-green);
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-green);
+            font-weight: 600;
+            padding: 8px 16px;
+            border: 1px solid var(--accent-green);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .project-links a:hover {
+            background: var(--accent-green);
+            color: var(--text-dark);
+        }
+
+        .project-links i {
+            font-size: 1.1em;
+        }
+
+        /* Tech Stack Section */
+        #tech-stack {
+            width: 100%;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 25px;
+            text-align: center;
+        }
+        
+        #tech-stack h2 {
+            font-size: 1.75em;
+            font-weight: 700;
+            margin-bottom: 40px;
+            font-family: 'Fira Mono', monospace;
+            color: var(--text-light);
+        }
+        
+        .tech-stack-container {
+            margin: 0 auto;
+            max-width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .skill {
+            border-radius: 12px;
+            margin: 5px;
+            border: 2px solid var(--accent-green);
+            padding: 10px 18px;
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-blue);
+        }
+        
+        .skill span {
+            margin-left: 10px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        
+        .skill img {
+            width: 28px;
+            height: 28px;
+            filter: brightness(0.95);
+        }
+
+        /* Fallback for missing icons */
+        .skill .material-icons {
+            font-size: 24px;
+            color: var(--accent-green);
+            margin-right: 5px;
+        }
+
+        /* Terminal Container */
+        .terminal-container {
+            max-width: 900px;
+            margin: 60px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .terminal-header {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-green);
+        }
+
+        #terminal-title {
+            font-family: 'Fira Code', monospace;
+            color: var(--accent-green);
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        .right-side-buttons i {
+            color: rgba(255, 255, 255, 0.7);
+            margin-left: 12px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .right-side-buttons i:hover {
+            color: var(--accent-green);
+        }
+
+        .terminal-window {
+            background: var(--terminal-bg);
+            backdrop-filter: blur(5px);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-top: none;
+        }
+
+        .statement {
+            margin-bottom: 25px;
+        }
+
+        .input {
+            font-family: 'Fira Code', monospace;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+
+        .input::before {
+            content: "> ";
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        .return {
+            font-family: 'Fira Code', monospace;
+            color: var(--accent-green);
+            padding-left: 25px;
+            font-size: 0.95em;
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom span {
+            display: inline-block;
+            width: 12px;
+            height: 24px;
+            background: var(--accent-green);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Footer */
+        .footer-container {
+            margin-top: 80px;
+            padding: 50px 30px 30px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            border-top: 2px solid var(--accent-green);
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .motto {
+            font-size: 1.2em;
+            font-style: italic;
+            color: var(--accent-green);
+            letter-spacing: 0.05em;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-link a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--accent-green);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-link a:hover {
+            background: var(--accent-green);
+            transform: translateY(-3px);
+        }
+
+        .social-link a:hover i {
+            color: var(--text-dark);
+        }
+
+        .social-link i {
+            font-size: 1.4em;
+            color: var(--text-light);
+        }
+
+        .copyright {
+            font-size: 0.95em;
+            opacity: 0.8;
+            margin-top: 15px;
+            color: var(--text-light);
+        }
+
+        .copyright i {
+            margin-right: 5px;
+            color: var(--accent-green);
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .header {
+                padding: 12px 20px;
+            }
+
+            .header-logo {
+                font-size: 1.2em;
+            }
+
+            .toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--header-bg);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                gap: 30px;
+                transition: left 0.3s ease;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item a {
+                font-size: 1.3em;
+            }
+
+            .theme-preview {
+                margin-left: 10px;
+                gap: 5px;
+            }
+
+            .color-dot {
+                width: 25px;
+                height: 25px;
+            }
+
+            .main-container {
+                padding: 0 15px;
+                margin-top: 80px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .terminal-window {
+                padding: 20px;
+            }
+
+            .tech-stack-container {
+                gap: 10px;
+            }
+
+            .skill {
+                padding: 8px 12px;
+            }
+
+            .skill img {
+                width: 22px;
+                height: 22px;
+            }
+
+            .skill span {
+                font-size: 0.9em;
+            }
+        }
+
+        @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body data-theme="dark">
+    <!-- Header Section -->
     <header class="header">
-            <a href="https://comnsense.github.io" class="header-logo">@Hello.World</a>
-            <nav class="nav">
-                <div class="toggle"><i class="fas fa-bars"></i></div>
-                <ul class="nav-menu">
+        <a href="https://comnsense.github.io" class="header-logo">@HelloWorld</a>
+        
+        <nav class="nav">
+           
+            <div class="theme-preview">
+                <div class="color-dot dot-dark" onclick="setTheme('dark')" title="Dark Theme"></div> 
+                <div class="color-dot dot-light" onclick="setTheme('light')" title="Light Theme"></div>
+            </div>
+        </nav>
+    </header>
 
-                     <li class="nav-item">   
-                        <a href="./projects">Projects</a> </li>
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="card-title">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238bc34a' stroke-width='2'%3E%3Cpolyline points='16 18 22 12 16 6'%3E%3C/polyline%3E%3Cpolyline points='8 6 2 12 8 18'%3E%3C/polyline%3E%3C/svg%3E" alt="Code icon">
+                Projects & Development
+            </h2>
 
-                        <li class="nav-item">
-                            <a href="./about">About.me</a></li>
+            <div class="projects-grid">
+                <!-- AppSheet Project -->
+                <div class="project-card">
+                    <div class="card-info">
+                        <h3 class="project-title">Application  Bulgarian Chinese Chamber for Industrial Development (BCCID)</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag">AppSheet</span>
+                            <span class="skill-tag">Data visualization</span>
+                         </div>
+                        <div class="item-details">
+                            <ul>
+                                <li>Manage members, customers, and payments for services</li>
+                                <li>Process optimization through data visualization</li>
+                            </ul>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.appsheet.com/start/5e82fa28-7112-40f0-ab58-2fba90efe623?platform=desktop" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> AppSheet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CV Project -->
+                <div class="project-card">
+                    <div class="card-info">
+                        <h3 class="project-title">CV / Resume</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                        <p class="item-details">CV with portfolio and responsive design</p>
+                        <div class="project-links">
+                            <a href="https://comnsense.github.io/" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Overview
+                            </a>
+                            <a href="https://github.com/comnsense/comnsense.github.io" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tic Tac Toe -->
+                <div class="project-card">
+                    <img src="images/tic-tac-toe.gif" alt="Tic Tac Toe Game" class="project-preview-img" onerror="this.style.display='none'">
+                    <div class="card-info">
+                        <h3 class="project-title">TIC-TAC-TOE Game</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://comnsense.github.io/Tic-Tac-Toe-Game" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="https://github.com/comnsense/tic-tac-toe" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Halloween Project -->
+                <div class="project-card">
+                    <img src="images/Helloween-Candy-Responsive-App.jpg" alt="Halloween Website" class="project-preview-img" onerror="this.style.display='none'">
+                    <div class="card-info">
+                        <h3 class="project-title">Halloween Website</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Responsive</span>
+                        </div>
+                        <p class="item-details">Web-Design project with thematic design.</p>
+                        <div class="project-links">
+                            <a href="https://comnsense.github.io/Web-Design-Final/index" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="https://github.com/comnsense/Web-Design-Final/" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Счетоводна практика -->
+                <div class="project-card">
+                    <div class="card-info">
+                        <h3 class="project-title">Accounting practice</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                        <p class="item-details">Detailed description of accounting experience</p>
+                        <div class="project-links">
+                            <a href="schety.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Overview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дипломно приложение -->
+                <div class="project-card">
+                    <div class="card-info">
+                        <h3 class="project-title">Annex to the diploma of higher education </h3>
+                        <div class="project-skills">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                        <p class="item-details">Completed courses and ECTS credits</p>
+                        <div class="project-links">
+                            <a href="Thesis application.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Overview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack">
+            <h2>Tech Stack</h2>
+            
+            <div class="tech-stack-container">
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>HTML5</span>'">
+                    <span>HTML5</span>
+                </div>
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>palette</span><span>CSS3</span>'">
+                    <span>CSS3</span>
+                </div>   
+
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>javascript</span><span>JavaScript</span>'">
+                    <span>JavaScript</span>
+                </div>
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>terminal</span><span>Bash</span>'">
+                    <span>Bash</span>
+                </div>
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>React</span>'">
+                    <span>React</span>
+                </div>  
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" alt="Babel" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>transform</span><span>Babel</span>'"> 
+                </div> 
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>folder</span><span>npm</span>'">
+                </div>  
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>share</span><span>Git</span>'">
+                    <span>Git</span>
+                </div>  
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>description</span><span>Markdown</span>'">
+                    <span>Markdown</span>
+                </div>
+
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>storage</span><span>Firebase</span>'">
+                    <span>Firebase</span>
+                </div>
+                            
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>AWS</span>'">
+                    <span>AWS</span>
+                </div> 
+            </div>
+        </section>
+
+        <!-- Terminal Container / About Section -->
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div id="terminal-title">A Little Bit About Me</div>
+                <div class="right-side-buttons">
+                    <i class="fas fa-window-minimize"></i>
+                    <i class="fas fa-window-restore"></i>
+                    <i class="fas fa-window-close"></i>
+                </div>
+            </div>
+            <div class="terminal-window">
+                <div class="statement">
+                    <p class="input">my.story</p>
+                    <p class="return">Throughout my life I have always been eager to learn. I have successfully completed several web projects from scratch.I try and experiment with different technology stacks.</p>
+                </div>
  
-                    <!--  <li class="nav-item">
-                        <a href="./projects" c>
-                     
-                        <span>Projects</span></a></li>
+
+                <div class="statement">
+                    <p class="input">I can help you build a product, feature or website. </p>
+                    <p class="return"><a href="mailto:ahwakk@icloud.com" class="green">Connect.me</a></p>
+                </div>
+           
+                <div class="statement">
+                    <p class="input bottom"><span></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-column">        
+            <!-- Social Links -->
+            <ul class="social-links">
+                <li class="social-link">
+                    <a href="https://www.linkedin.com/in/comnsense" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
-                </div>-->
-
+                </li>
+                <li class="social-link">
+                    <a href="https://github.com/comnsense" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-link">
+                    <a href="https://t.me/comnsense88" aria-label="Telegram" target="_blank" rel="noopener">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                </li>
+                <li class="social-link">
+                    <a href="https://comnsense.github.io/" aria-label="Website" target="_blank" rel="noopener">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </li> 
             </ul>
-            </nav>
-        </header>
- 
-       
-
-        <div class="profile-container">        
-            <p class="section-description">
-                   <em>@ Are you searching for a practical enthusiast for your project?
-                    <br> I can help you build a product , feature or website...
-                    I am perfectly positioned to formulate the path of 
-                    a feasible product with customer experience in mind. 
-   </em></p>
-
-    <h3 class="medium-title" align="center">
-        <em>  @ <a class="green" href="mailto:ahwakk@icloud.com.com">Connect.me</a></em></h3></p>
-
-
-
-
-
- <section id="tech-stack">
-    <a align="center">Tech Stack</a>
-    
-    
-                     
-<div class="tech-stack-container">
-
-        <div class="skill">
-         <img src="./img/html5.svg">
+            
+            <span class="copyright"> 
+                <i class="fas fa-copyright"></i> comnsense 2022-2026
+            </span>
         </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Theme switching function
+        function setTheme(themeName) {
+            document.body.setAttribute('data-theme', themeName);
+            
+            // Save theme preference
+            localStorage.setItem('selectedTheme', themeName);
+            
+            // Update active states on color dots
+            const colorDots = document.querySelectorAll('.color-dot');
+            colorDots.forEach(dot => dot.classList.remove('active'));
+            
+            const activeDot = document.querySelector(`.dot-${themeName}`);
+            if (activeDot) {
+                activeDot.classList.add('active');
+            }
+        }
         
-        <div class="skill">
-            <img src="./img/css3.svg">
-        </div>   
-
+        // Load saved theme on page load
+        function loadSavedTheme() {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
+            setTheme(savedTheme);
+        }
         
-        <div class="skill">
-            <img src="./img/javascript.svg">
-        </div>
-        
-        <div class="skill">
-            <img src="./img/bash-svg.svg">
-        </div>
-        
-        <div class="skill">
-            <img src="./img/react.svg"><span>React</span>
-        </div>  
-        
-        <div class="skill">
-            <img src="./img/babel-svg.svg"> 
-        </div> 
-        
-        <div class="skill">
-            <img src="./img/npm.svg" alt="npm Icon">
-        </div>  
-        
-        <div class="skill">
-            <img src="./img/git.svg"><span>Git</span>
-        </div>  
-        
-        <div class="skill">
-            <img src="./img/markdown.svg"><span>Markdown</span>
-        </div>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load theme
+            loadSavedTheme();
+            
+            const toggle = document.querySelector(".toggle");
+            const menu = document.querySelector(".nav-menu");
 
-        <div class="skill">
-            <img src="./img/firebase.svg"><span>Firebase</span>
-        </div>
-        <div class="skill">
-            <img src="./img/java.svg"><span>Java</span>
-        </div>
-        
-        <br>
-        <div class="skill">
-            <img src="./img/aws.svg">
-        </div> 
-        <!--   <div class="skill"><img src="./img/Tailwind_CSS.svg" ><span>TailwindCSS</span></div>-->
-    
-    </div></div>
+            if (toggle && menu) {
+                toggle.addEventListener("click", function() {
+                    if (menu.classList.contains("active")) {
+                        menu.classList.remove("active");
+                        toggle.innerHTML = `<i class="fas fa-bars"></i>`;
+                        document.body.style.overflow = '';
+                    } else {
+                        menu.classList.add("active");
+                        toggle.innerHTML = `<i class="fas fa-times"></i>`;
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
 
-</div>  
-         
-</section>
- </main></div>
+                // Close menu when clicking on a link
+                document.querySelectorAll('.nav-item a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (menu.classList.contains('active')) {
+                            menu.classList.remove('active');
+                            toggle.innerHTML = `<i class="fas fa-bars"></i>`;
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
 
+                // Close menu on window resize
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 768 && menu.classList.contains('active')) {
+                        menu.classList.remove('active');
+                        toggle.innerHTML = `<i class="fas fa-bars"></i>`;
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
 
-<!-- FOOTER ---> 
-<footer class="footer-container">
-
-<div class="footer-column"> 
-
-      <a  class="motto">@ Purpose Fuels Passion</a> </div> 
-    
-<div class="footer-column"> 
-
-       <div class="socials">
-
-         <ul> 
-             <li class="social-link"> <a href="https://www.linkedin.com/in/mirelsewhere/" aria-label="LinkedIn" target="_blank">
-                <i class="fab fa-linkedin-in"> </i> </a>   </li>
-
-             <li class="social-link"> <a href="https://github.com/comnsense" aria-label="GitHub" target="_blank">
-                <i class="fab fa-github"> </i> </a>        </li>
-
-             <li class="social-link"> <a href="https://twitter.com/ahhwakk" aria-label="Twitter" target="_blank">
-                <i class="fab fa-twitter"> </i> </a>       </li>
-
-             <li class="social-link"> <a href="https://instagram.com/comnsense" aria-label="Instagram" target="_blank">
-                <i class="fab fa-instagram"></i></a>       </li> 
-             </ul> 
-         </div>
- 
-      
-  <span class="copyright"> <i class="fas fa-copyright"></i> omnsense-2022 </span> </div> </div>
- 
-
- </footer>  <!-- END ---> 
-
-<script src="./js/main.js"> </script>
-   
-
- </body>
-
+            // Fix for missing images - use CDN fallbacks
+            const techImages = document.querySelectorAll('.skill img');
+            techImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    // If image fails to load, replace with material icon
+                    const parent = this.parentElement;
+                    const techName = this.alt;
+                    const iconMap = {
+                        'HTML5': 'code',
+                        'CSS3': 'palette',
+                        'JavaScript': 'javascript',
+                        'Bash': 'terminal',
+                        'React': 'code',
+                        'Babel': 'transform',
+                        'npm': 'folder',
+                        'Git': 'share',
+                        'Markdown': 'description',
+                        'Firebase': 'storage',
+                        'Java': 'data_object',
+                        'AWS': 'cloud'
+                    };
+                    
+                    if (parent && !parent.querySelector('.material-icons')) {
+                        const iconSpan = document.createElement('span');
+                        iconSpan.className = 'material-icons';
+                        iconSpan.textContent = iconMap[techName] || 'code';
+                        parent.insertBefore(iconSpan, parent.querySelector('span'));
+                    }
+                    this.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
 </html>
