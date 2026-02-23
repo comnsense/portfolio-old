@@ -291,6 +291,21 @@
             background-color: var(--secondary-bg);
         }
 
+        .image-fallback {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .image-fallback i {
+            font-size: 3em;
+            color: var(--text-dark);
+        }
+
         .card-info {
             padding: 25px;
             flex: 1;
@@ -733,8 +748,10 @@
 
                 <!-- Blog Theme Project -->
                 <div class="project-card">
-                    <img src="./img/project-preview/mumblr-p.png" alt="Blog Theme" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
-  
+                    <img src="./img/project-preview/mumblr-p.png" alt="Blog Theme" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback').style.display='flex';">
+                    <div class="image-fallback">
+                        <i class="fas fa-blog"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Blog Theme - MumblrTum</h3>
                         <div class="project-skills">
@@ -757,8 +774,10 @@
 
                 <!-- Website - Main Project -->
                 <div class="project-card">
-                    <img src="./img/Portfolio.jpg" alt="Website Main" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
-                    
+                    <img src="./img/Portfolio.jpg" alt="Website Main" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback').style.display='flex';">
+                    <div class="image-fallback">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Website - Main Portfolio</h3>
                         <div class="project-skills">
@@ -781,8 +800,9 @@
 
                 <!-- Tic Tac Toe -->
                 <div class="project-card">
-                    <img src="./img/project-preview/tic-tac-toe.gif" alt="Tic Tac Toe Game" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
-                        <i class="fas fa-gamepad" style="font-size: 3em; color: var(--text-dark);"></i>
+                    <img src="./img/project-preview/tic-tac-toe.gif" alt="Tic Tac Toe Game" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback').style.display='flex';">
+                    <div class="image-fallback">
+                        <i class="fas fa-gamepad"></i>
                     </div>
                     <div class="card-info">
                         <h3 class="project-title">TIC-TAC-TOE Game</h3>
@@ -804,8 +824,10 @@
 
                 <!-- Halloween Project -->
                 <div class="project-card">
-                    <img src="./img/HelloweenApp.jpg" alt="Halloween Website" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
-                                         </div>
+                    <img src="./img/HelloweenApp.jpg" alt="Halloween Website" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback').style.display='flex';">
+                    <div class="image-fallback">
+                        <i class="fas fa-pumpkin"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Halloween Website</h3>
                         <div class="project-skills">
@@ -827,7 +849,9 @@
 
                 <!-- Thesis Project -->
                 <div class="project-card">
-                    <img src="./img/thesis-app.jpg" alt="Thesis Project" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
+                    <img src="./img/thesis-app.jpg" alt="Thesis Project" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback').style.display='flex';">
+                    <div class="image-fallback">
+                        <i class="fas fa-brain"></i>
                     </div>
                     <div class="card-info">
                         <h3 class="project-title">Development of an App for Mental Health Support</h3>
@@ -852,8 +876,10 @@
 
                 <!-- COMBINED CARD: Accounting Practice + Diploma Application -->
                 <div class="project-card">
-                    <img src="./img/Annex.jpg" alt="Accounting and Diploma" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
-                                       </div>
+                    <img src="./img/Annex.jpg" alt="Accounting and Diploma" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback').style.display='flex';">
+                    <div class="image-fallback">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Accounting Practice & Diploma Application</h3>
                         <div class="project-skills">
