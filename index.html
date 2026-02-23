@@ -375,7 +375,7 @@
             font-size: 1.1em;
         }
 
-        /* Tech Stack Section */
+        /* Tech Stack Section - Реорганизиран */
         #tech-stack {
             width: 100%;
             max-width: 1200px;
@@ -399,14 +399,14 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
         
         .skill {
             border-radius: 12px;
-            margin: 5px;
+            margin: 3px;
             border: 2px solid var(--accent-green);
-            padding: 10px 18px;
+            padding: 8px 15px;
             display: flex;
             align-items: center;
             background: var(--card-bg);
@@ -421,20 +421,21 @@
         }
         
         .skill span {
-            margin-left: 10px;
+            margin-left: 8px;
             color: var(--text-light);
             font-weight: 600;
+            font-size: 0.9em;
         }
         
         .skill img {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             filter: brightness(0.95);
         }
 
         /* Fallback for missing icons */
         .skill .material-icons {
-            font-size: 24px;
+            font-size: 22px;
             color: var(--accent-green);
             margin-right: 5px;
         }
@@ -667,20 +668,20 @@
             }
 
             .tech-stack-container {
-                gap: 10px;
+                gap: 8px;
             }
 
             .skill {
-                padding: 8px 12px;
+                padding: 6px 10px;
             }
 
             .skill img {
-                width: 22px;
-                height: 22px;
+                width: 20px;
+                height: 20px;
             }
 
             .skill span {
-                font-size: 0.9em;
+                font-size: 0.85em;
             }
         }
 
@@ -719,11 +720,11 @@
                 <!-- AppSheet Project -->
                 <div class="project-card">
                     <div class="card-info">
-                        <h3 class="project-title">Application  Bulgarian Chinese Chamber for Industrial Development (BCCID)</h3>
+                        <h3 class="project-title">Application Bulgarian Chinese Chamber for Industrial Development (BCCID)</h3>
                         <div class="project-skills">
                             <span class="skill-tag">AppSheet</span>
                             <span class="skill-tag">Data visualization</span>
-                         </div>
+                        </div>
                         <div class="item-details">
                             <ul>
                                 <li>Manage members, customers, and payments for services</li>
@@ -738,16 +739,41 @@
                     </div>
                 </div>
 
-                <!-- CV Project -->
+                <!-- Blog Theme Project (НОВ) -->
                 <div class="project-card">
+                    <img src="/img/project-preview/mumblr-p.png" alt="Blog Theme" class="project-preview-img" onerror="this.style.display='none'">
                     <div class="card-info">
-                        <h3 class="project-title">CV / Resume</h3>
+                        <h3 class="project-title">Blog Theme - MumblrTum</h3>
                         <div class="project-skills">
                             <span class="skill-tag">HTML5</span>
                             <span class="skill-tag">CSS3</span>
                             <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Responsive</span>
                         </div>
-                        <p class="item-details">CV with portfolio and responsive design</p>
+                        <p class="item-details">Custom blog theme with responsive design</p>
+                        <div class="project-links">
+                            <a href="https://comnsense.github.io/" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Overview
+                            </a>
+                            <a href="https://github.com/comnsense/mumblrtum" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website - Main Project (НОВ) -->
+                <div class="project-card">
+                    <img src="/img/github.png" alt="Website Main" class="project-preview-img" onerror="this.style.display='none'">
+                    <div class="card-info">
+                        <h3 class="project-title">Website - Main Portfolio</h3>
+                        <div class="project-skills">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Responsive</span>
+                        </div>
+                        <p class="item-details">Main portfolio website with CV and projects</p>
                         <div class="project-links">
                             <a href="https://comnsense.github.io/" target="_blank" rel="noopener">
                                 <i class="fas fa-external-link-alt"></i> Overview
@@ -761,7 +787,7 @@
 
                 <!-- Tic Tac Toe -->
                 <div class="project-card">
-                    <img src="images/tic-tac-toe.gif" alt="Tic Tac Toe Game" class="project-preview-img" onerror="this.style.display='none'">
+                    <img src="/img/project-preview/tic-tac-toe.gif" alt="Tic Tac Toe Game" class="project-preview-img" onerror="this.style.display='none'">
                     <div class="card-info">
                         <h3 class="project-title">TIC-TAC-TOE Game</h3>
                         <div class="project-skills">
@@ -802,37 +828,51 @@
                     </div>
                 </div>
 
-                <!-- Счетоводна практика -->
+                <!-- Thesis Project -->
                 <div class="project-card">
                     <div class="card-info">
-                        <h3 class="project-title">Accounting practice</h3>
+                        <h3 class="project-title">Development of an App for Mental Health Support</h3>
                         <div class="project-skills">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">AI</span>
                         </div>
-                        <p class="item-details">Detailed description of accounting experience</p>
+                        <p class="item-details">Using AI and NLP for analyzing user queries and generating adaptive responses.</p>
                         <div class="project-links">
-                            <a href="schety.html" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Overview
+                            <a href="thesis.pdf" class="hyperlink" target="_blank">
+                                <i class="fas fa-file-pdf"></i> Thesis
+                            </a>
+                            <a href="https://github.com/comnsense/comnsense.github.io" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Дипломно приложение -->
+                <!-- КОМБИНИРАНА КАРТА: Счетоводна практика + Дипломно приложение -->
                 <div class="project-card">
                     <div class="card-info">
-                        <h3 class="project-title">Annex to the diploma of higher education </h3>
+                        <h3 class="project-title">Accounting Practice & Diploma Application</h3>
                         <div class="project-skills">
                             <span class="skill-tag">HTML5</span>
                             <span class="skill-tag">CSS3</span>
                             <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Data Analysis</span>
                         </div>
-                        <p class="item-details">Completed courses and ECTS credits</p>
+                        <div class="item-details">
+                            <ul>
+                                <li><strong>Accounting Practice:</strong> Detailed description of accounting experience with 16 companies</li>
+                                <li><strong>Diploma Application:</strong> Completed courses and ECTS credits</li>
+                            </ul>
+                        </div>
                         <div class="project-links">
+                            <a href="schety.html" target="_blank">
+                                <i class="fas fa-calculator"></i> Accounting
+                            </a>
                             <a href="Thesis application.html" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Overview
+                                <i class="fas fa-graduation-cap"></i> Diploma
                             </a>
                         </div>
                     </div>
@@ -840,11 +880,12 @@
             </div>
         </section>
 
-        <!-- Tech Stack Section -->
+        <!-- Tech Stack Section - Реорганизиран и групиран -->
         <section id="tech-stack">
             <h2>Tech Stack</h2>
             
             <div class="tech-stack-container">
+                <!-- Frontend -->
                 <div class="skill">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>HTML5</span>'">
                     <span>HTML5</span>
@@ -853,11 +894,32 @@
                 <div class="skill">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>palette</span><span>CSS3</span>'">
                     <span>CSS3</span>
-                </div>   
+                </div>
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>style</span><span>Tailwind</span>'">
+                    <span>Tailwind</span>
+                </div>
 
                 <div class="skill">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>javascript</span><span>JavaScript</span>'">
                     <span>JavaScript</span>
+                </div>
+                
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>React</span>'">
+                    <span>React</span>
+                </div>
+
+                <!-- Backend & Tools -->
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>settings</span><span>Node.js</span>'">
+                    <span>Node.js</span>
+                </div>
+
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>bolt</span><span>Express</span>'">
+                    <span>Express</span>
                 </div>
                 
                 <div class="skill">
@@ -866,16 +928,13 @@
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>React</span>'">
-                    <span>React</span>
-                </div>  
-                
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" alt="Babel" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>transform</span><span>Babel</span>'"> 
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" alt="Babel" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>transform</span><span>Babel</span>'">
+                    <span>Babel</span>
                 </div> 
                 
                 <div class="skill">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>folder</span><span>npm</span>'">
+                    <span>npm</span>
                 </div>  
                 
                 <div class="skill">
@@ -884,10 +943,27 @@
                 </div>  
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>description</span><span>Markdown</span>'">
-                    <span>Markdown</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Pages" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>GitHub</span>'">
+                    <span>GitHub</span>
                 </div>
 
+                <!-- CMS & Design -->
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>web</span><span>WordPress</span>'">
+                    <span>WordPress</span>
+                </div>
+
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>brush</span><span>Canva</span>'">
+                    <span>Canva</span>
+                </div>
+
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" alt="Photoshop" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>brush</span><span>Photoshop</span>'">
+                    <span>Photoshop</span>
+                </div>
+
+                <!-- Cloud & Databases -->
                 <div class="skill">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>storage</span><span>Firebase</span>'">
                     <span>Firebase</span>
@@ -896,7 +972,49 @@
                 <div class="skill">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>AWS</span>'">
                     <span>AWS</span>
-                </div> 
+                </div>
+
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>GCloud</span>'">
+                    <span>GCloud</span>
+                </div>
+
+                <!-- CRM & Business -->
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>Salesforce</span>'">
+                    <span>Salesforce</span>
+                </div>
+
+                <div class="skill">
+                    <span class="material-icons">support_agent</span>
+                    <span>Zendesk</span>
+                </div>
+
+                <div class="skill">
+                    <span class="material-icons">business</span>
+                    <span>B2B</span>
+                </div>
+
+                <div class="skill">
+                    <span class="material-icons">inventory</span>
+                    <span>ERP</span>
+                </div>
+
+                <div class="skill">
+                    <span class="material-icons">people</span>
+                    <span>CRM</span>
+                </div>
+
+                <!-- Operating Systems -->
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>window</span><span>Windows</span>'">
+                    <span>Windows</span>
+                </div>
+
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Unix/Linux" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>terminal</span><span>Unix</span>'">
+                    <span>Unix</span>
+                </div>
             </div>
         </section>
 
@@ -911,8 +1029,11 @@
                 </div>
             </div>
             <div class="terminal-window">
-                
-
+                <div class="statement">
+                    <p class="input">my.story</p>
+                    <p class="return">Throughout my life I have always been eager to learn. I have successfully completed several web projects from scratch. I try and experiment with different technology stacks.</p>
+                </div>
+ 
                 <div class="statement">
                     <p class="input">I can help you build a product, feature or website. </p>
                     <p class="return"><a href="mailto:ahwakk@icloud.com" class="green">Connect.me</a></p>
@@ -1035,16 +1156,25 @@
                     const iconMap = {
                         'HTML5': 'code',
                         'CSS3': 'palette',
+                        'Tailwind CSS': 'style',
                         'JavaScript': 'javascript',
-                        'Bash': 'terminal',
                         'React': 'code',
+                        'Node.js': 'settings',
+                        'Express': 'bolt',
+                        'Bash': 'terminal',
                         'Babel': 'transform',
                         'npm': 'folder',
                         'Git': 'share',
-                        'Markdown': 'description',
+                        'GitHub Pages': 'cloud',
+                        'WordPress': 'web',
+                        'Canva': 'brush',
+                        'Photoshop': 'brush',
                         'Firebase': 'storage',
-                        'Java': 'data_object',
-                        'AWS': 'cloud'
+                        'AWS': 'cloud',
+                        'Google Cloud': 'cloud',
+                        'Salesforce': 'cloud',
+                        'Windows': 'window',
+                        'Unix/Linux': 'terminal'
                     };
                     
                     if (parent && !parent.querySelector('.material-icons')) {
