@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Fira+Code:wght@400;500&family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons (single instance) -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <!-- Material Icons for fallback -->
@@ -289,11 +289,6 @@
             object-fit: cover;
             border-bottom: 2px solid var(--border-color);
             background-color: var(--secondary-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-green);
-            font-size: 3em;
         }
 
         .card-info {
@@ -688,19 +683,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
-        /* Placeholder for missing images */
-        .image-placeholder {
-            width: 100%;
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%);
-            color: var(--text-dark);
-            font-size: 3em;
-            border-bottom: 2px solid var(--border-color);
-        }
     </style>
 </head>
 
@@ -751,8 +733,9 @@
 
                 <!-- Blog Theme Project -->
                 <div class="project-card">
-                    <div class="image-placeholder">
-                        <i class="fas fa-blog"></i>
+                    <img src="./img/project-preview/mumblr-p.png" alt="Blog Theme" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
+                    <div class="image-fallback" style="display: none; width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-blog" style="font-size: 3em; color: var(--text-dark);"></i>
                     </div>
                     <div class="card-info">
                         <h3 class="project-title">Blog Theme - MumblrTum</h3>
@@ -776,8 +759,9 @@
 
                 <!-- Website - Main Project -->
                 <div class="project-card">
-                    <div class="image-placeholder">
-                        <i class="fas fa-laptop-code"></i>
+                    <img src="./img/Portfolio.jpg" alt="Website Main" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
+                    <div class="image-fallback" style="display: none; width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-laptop-code" style="font-size: 3em; color: var(--text-dark);"></i>
                     </div>
                     <div class="card-info">
                         <h3 class="project-title">Website - Main Portfolio</h3>
@@ -801,8 +785,9 @@
 
                 <!-- Tic Tac Toe -->
                 <div class="project-card">
-                    <div class="image-placeholder">
-                        <i class="fas fa-gamepad"></i>
+                    <img src="./img/project-preview/tic-tac-toe.gif" alt="Tic Tac Toe Game" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
+                    <div class="image-fallback" style="display: none; width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-gamepad" style="font-size: 3em; color: var(--text-dark);"></i>
                     </div>
                     <div class="card-info">
                         <h3 class="project-title">TIC-TAC-TOE Game</h3>
@@ -824,8 +809,9 @@
 
                 <!-- Halloween Project -->
                 <div class="project-card">
-                    <div class="image-placeholder">
-                        <i class="fas fa-pumpkin"></i>
+                    <img src="./img/HelloweenApp.jpg" alt="Halloween Website" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
+                    <div class="image-fallback" style="display: none; width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-pumpkin" style="font-size: 3em; color: var(--text-dark);"></i>
                     </div>
                     <div class="card-info">
                         <h3 class="project-title">Halloween Website</h3>
@@ -848,8 +834,9 @@
 
                 <!-- Thesis Project -->
                 <div class="project-card">
-                    <div class="image-placeholder">
-                        <i class="fas fa-brain"></i>
+                    <img src="./img/thesis-app.jpg" alt="Thesis Project" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
+                    <div class="image-fallback" style="display: none; width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-brain" style="font-size: 3em; color: var(--text-dark);"></i>
                     </div>
                     <div class="card-info">
                         <h3 class="project-title">Development of an App for Mental Health Support</h3>
@@ -874,8 +861,9 @@
 
                 <!-- COMBINED CARD: Accounting Practice + Diploma Application -->
                 <div class="project-card">
-                    <div class="image-placeholder">
-                        <i class="fas fa-chart-bar"></i>
+                    <img src="./img/accounting-diploma.jpg" alt="Accounting and Diploma" class="project-preview-img" onerror="this.style.display='none'; this.parentElement.querySelector('.image-fallback')?.style.removeProperty('display');">
+                    <div class="image-fallback" style="display: none; width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-bar" style="font-size: 3em; color: var(--text-dark);"></i>
                     </div>
                     <div class="card-info">
                         <h3 class="project-title">Accounting Practice & Diploma Application</h3>
@@ -904,108 +892,108 @@
             </div>
         </section>
 
-        <!-- Tech Stack Section - Reorganized and grouped -->
+        <!-- Tech Stack Section -->
         <section id="tech-stack">
             <h2>Tech Stack</h2>
             
             <div class="tech-stack-container">
                 <!-- Frontend -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>HTML5</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
                     <span>HTML5</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>palette</span><span>CSS3</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
                     <span>CSS3</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>style</span><span>Tailwind</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
                     <span>Tailwind</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>javascript</span><span>JavaScript</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                     <span>JavaScript</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>React</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
                     <span>React</span>
                 </div>
 
                 <!-- Backend & Tools -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>settings</span><span>Node.js</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
                     <span>Node.js</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>bolt</span><span>Express</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
                     <span>Express</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>terminal</span><span>Bash</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash">
                     <span>Bash</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" alt="Babel" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>transform</span><span>Babel</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" alt="Babel">
                     <span>Babel</span>
                 </div> 
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>folder</span><span>npm</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm">
                     <span>npm</span>
                 </div>  
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>share</span><span>Git</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
                     <span>Git</span>
                 </div>  
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Pages" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>GitHub</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Pages">
                     <span>GitHub</span>
                 </div>
 
                 <!-- CMS & Design -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>web</span><span>WordPress</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress">
                     <span>WordPress</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>brush</span><span>Canva</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
                     <span>Canva</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" alt="Photoshop" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>brush</span><span>Photoshop</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" alt="Photoshop">
                     <span>Photoshop</span>
                 </div>
 
                 <!-- Cloud & Databases -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>storage</span><span>Firebase</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
                     <span>Firebase</span>
                 </div>
                             
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>AWS</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
                     <span>AWS</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>GCloud</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud">
                     <span>GCloud</span>
                 </div>
 
                 <!-- CRM & Business -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>Salesforce</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce">
                     <span>Salesforce</span>
                 </div>
 
@@ -1014,16 +1002,29 @@
                     <span>Zendesk</span>
                 </div>
 
-              
+                <div class="skill">
+                    <span class="material-icons">business</span>
+                    <span>B2B</span>
+                </div>
+
+                <div class="skill">
+                    <span class="material-icons">inventory</span>
+                    <span>ERP</span>
+                </div>
+
+                <div class="skill">
+                    <span class="material-icons">people</span>
+                    <span>CRM</span>
+                </div>
 
                 <!-- Operating Systems -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>window</span><span>Windows</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows">
                     <span>Windows</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Unix/Linux" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>terminal</span><span>Unix</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Unix/Linux">
                     <span>Unix</span>
                 </div>
             </div>
@@ -1095,39 +1096,44 @@
         // Theme switching function
         function setTheme(themeName) {
             document.body.setAttribute('data-theme', themeName);
-            
-            // Save theme preference
             localStorage.setItem('selectedTheme', themeName);
             
-            // Update active states on color dots
             const colorDots = document.querySelectorAll('.color-dot');
             colorDots.forEach(dot => dot.classList.remove('active'));
             
             const activeDot = document.querySelector(`.dot-${themeName}`);
-            if (activeDot) {
-                activeDot.classList.add('active');
-            }
+            if (activeDot) activeDot.classList.add('active');
         }
         
-        // Load saved theme on page load
+        // Load saved theme
         function loadSavedTheme() {
             const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
             setTheme(savedTheme);
         }
         
-        // Mobile menu functionality
+        // Handle image errors and show fallbacks
         document.addEventListener('DOMContentLoaded', function() {
-            // Load theme
             loadSavedTheme();
             
-            // Fix for missing images - use CDN fallbacks
+            // Handle project images
+            const projectImages = document.querySelectorAll('.project-preview-img');
+            projectImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.style.display = 'none';
+                    const fallback = this.parentElement.querySelector('.image-fallback');
+                    if (fallback) {
+                        fallback.style.display = 'flex';
+                    }
+                });
+            });
+            
+            // Handle tech stack images with CDN fallback
             const techImages = document.querySelectorAll('.skill img');
             techImages.forEach(img => {
                 img.addEventListener('error', function() {
                     const parent = this.parentElement;
                     const techName = this.alt;
                     
-                    // Create material icon fallback
                     const iconMap = {
                         'HTML5': 'code',
                         'CSS3': 'palette',
@@ -1152,13 +1158,10 @@
                         'Unix/Linux': 'terminal'
                     };
                     
-                    // Clear the parent and add fallback
-                    if (parent && !parent.querySelector('.material-icons')) {
-                        parent.innerHTML = `
-                            <span class="material-icons">${iconMap[techName] || 'code'}</span>
-                            <span>${techName}</span>
-                        `;
-                    }
+                    parent.innerHTML = `
+                        <span class="material-icons">${iconMap[techName] || 'code'}</span>
+                        <span>${techName}</span>
+                    `;
                 });
             });
         });
