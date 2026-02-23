@@ -288,6 +288,12 @@
             height: 180px;
             object-fit: cover;
             border-bottom: 2px solid var(--border-color);
+            background-color: var(--secondary-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-green);
+            font-size: 3em;
         }
 
         .card-info {
@@ -375,7 +381,7 @@
             font-size: 1.1em;
         }
 
-        /* Tech Stack Section - Реорганизиран */
+        /* Tech Stack Section */
         #tech-stack {
             width: 100%;
             max-width: 1200px;
@@ -546,14 +552,6 @@
             width: 100%;
         }
 
-        .motto {
-            font-size: 1.2em;
-            font-style: italic;
-            color: var(--accent-green);
-            letter-spacing: 0.05em;
-            margin-bottom: 25px;
-        }
-
         .social-links {
             display: flex;
             gap: 25px;
@@ -690,6 +688,19 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
+        /* Placeholder for missing images */
+        .image-placeholder {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%);
+            color: var(--text-dark);
+            font-size: 3em;
+            border-bottom: 2px solid var(--border-color);
+        }
     </style>
 </head>
 
@@ -699,7 +710,6 @@
         <a href="https://comnsense.github.io" class="header-logo">@HelloWorld</a>
         
         <nav class="nav">
-           
             <div class="theme-preview">
                 <div class="color-dot dot-dark" onclick="setTheme('dark')" title="Dark Theme"></div> 
                 <div class="color-dot dot-light" onclick="setTheme('light')" title="Light Theme"></div>
@@ -739,9 +749,11 @@
                     </div>
                 </div>
 
-                <!-- Blog Theme Project (НОВ) -->
+                <!-- Blog Theme Project -->
                 <div class="project-card">
-                    <img src="/img/project-preview/mumblr-p.png" alt="Blog Theme" class="project-preview-img" onerror="this.style.display='none'">
+                    <div class="image-placeholder">
+                        <i class="fas fa-blog"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Blog Theme - MumblrTum</h3>
                         <div class="project-skills">
@@ -762,9 +774,11 @@
                     </div>
                 </div>
 
-                <!-- Website - Main Project (НОВ) -->
+                <!-- Website - Main Project -->
                 <div class="project-card">
-                    <img src="/img/Portfolio.jpg" alt="Website Main" class="project-preview-img" onerror="this.style.display='none'">
+                    <div class="image-placeholder">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Website - Main Portfolio</h3>
                         <div class="project-skills">
@@ -787,7 +801,9 @@
 
                 <!-- Tic Tac Toe -->
                 <div class="project-card">
-                    <img src="/img/project-preview/tic-tac-toe.gif" alt="Tic Tac Toe Game" class="project-preview-img" onerror="this.style.display='none'">
+                    <div class="image-placeholder">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">TIC-TAC-TOE Game</h3>
                         <div class="project-skills">
@@ -808,7 +824,9 @@
 
                 <!-- Halloween Project -->
                 <div class="project-card">
-                    <img src="/HelloweenApp.jpg" alt="Halloween Website" class="project-preview-img" onerror="this.style.display='none'">
+                    <div class="image-placeholder">
+                        <i class="fas fa-pumpkin"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Halloween Website</h3>
                         <div class="project-skills">
@@ -830,6 +848,9 @@
 
                 <!-- Thesis Project -->
                 <div class="project-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-brain"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Development of an App for Mental Health Support</h3>
                         <div class="project-skills">
@@ -851,8 +872,11 @@
                     </div>
                 </div>
 
-                <!-- КОМБИНИРАНА КАРТА: Счетоводна практика + Дипломно приложение -->
+                <!-- COMBINED CARD: Accounting Practice + Diploma Application -->
                 <div class="project-card">
+                    <div class="image-placeholder">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
                     <div class="card-info">
                         <h3 class="project-title">Accounting Practice & Diploma Application</h3>
                         <div class="project-skills">
@@ -880,108 +904,108 @@
             </div>
         </section>
 
-        <!-- Tech Stack Section - Реорганизиран и групиран -->
+        <!-- Tech Stack Section - Reorganized and grouped -->
         <section id="tech-stack">
             <h2>Tech Stack</h2>
             
             <div class="tech-stack-container">
                 <!-- Frontend -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>HTML5</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>HTML5</span>'">
                     <span>HTML5</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>palette</span><span>CSS3</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>palette</span><span>CSS3</span>'">
                     <span>CSS3</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>style</span><span>Tailwind</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>style</span><span>Tailwind</span>'">
                     <span>Tailwind</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>javascript</span><span>JavaScript</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>javascript</span><span>JavaScript</span>'">
                     <span>JavaScript</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>React</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>code</span><span>React</span>'">
                     <span>React</span>
                 </div>
 
                 <!-- Backend & Tools -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>settings</span><span>Node.js</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>settings</span><span>Node.js</span>'">
                     <span>Node.js</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>bolt</span><span>Express</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>bolt</span><span>Express</span>'">
                     <span>Express</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>terminal</span><span>Bash</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>terminal</span><span>Bash</span>'">
                     <span>Bash</span>
                 </div>
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" alt="Babel" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>transform</span><span>Babel</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" alt="Babel" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>transform</span><span>Babel</span>'">
                     <span>Babel</span>
                 </div> 
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>folder</span><span>npm</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>folder</span><span>npm</span>'">
                     <span>npm</span>
                 </div>  
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>share</span><span>Git</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>share</span><span>Git</span>'">
                     <span>Git</span>
                 </div>  
                 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Pages" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>GitHub</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Pages" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>GitHub</span>'">
                     <span>GitHub</span>
                 </div>
 
                 <!-- CMS & Design -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>web</span><span>WordPress</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>web</span><span>WordPress</span>'">
                     <span>WordPress</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>brush</span><span>Canva</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>brush</span><span>Canva</span>'">
                     <span>Canva</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" alt="Photoshop" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>brush</span><span>Photoshop</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" alt="Photoshop" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>brush</span><span>Photoshop</span>'">
                     <span>Photoshop</span>
                 </div>
 
                 <!-- Cloud & Databases -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>storage</span><span>Firebase</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>storage</span><span>Firebase</span>'">
                     <span>Firebase</span>
                 </div>
                             
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>AWS</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>AWS</span>'">
                     <span>AWS</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>GCloud</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>GCloud</span>'">
                     <span>GCloud</span>
                 </div>
 
                 <!-- CRM & Business -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>Salesforce</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>cloud</span><span>Salesforce</span>'">
                     <span>Salesforce</span>
                 </div>
 
@@ -990,60 +1014,49 @@
                     <span>Zendesk</span>
                 </div>
 
-                <div class="skill">
-                    <span class="material-icons">business</span>
-                    <span>B2B</span>
-                </div>
-
-                <div class="skill">
-                    <span class="material-icons">inventory</span>
-                    <span>ERP</span>
-                </div>
-
-                <div class="skill">
-                    <span class="material-icons">people</span>
-                    <span>CRM</span>
-                </div>
+              
 
                 <!-- Operating Systems -->
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>window</span><span>Windows</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>window</span><span>Windows</span>'">
                     <span>Windows</span>
                 </div>
 
                 <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Unix/Linux" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'material-icons\'>terminal</span><span>Unix</span>'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Unix/Linux" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span class=\'material-icons\'>terminal</span><span>Unix</span>'">
                     <span>Unix</span>
                 </div>
             </div>
         </section>
-  <!-- Terminal Container / About Section -->
-    <div class="terminal-container">
-    <div class="terminal-header">
-        <div id="terminal-title">A Little Bit About Me</div>
-        <div class="right-side-buttons">
-            <i class="fas fa-window-minimize"></i>
-            <i class="fas fa-window-restore"></i>
-            <i class="fas fa-window-close"></i>
+        
+        <!-- Terminal Container / About Section -->
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div id="terminal-title">A Little Bit About Me</div>
+                <div class="right-side-buttons">
+                    <i class="fas fa-window-minimize"></i>
+                    <i class="fas fa-window-restore"></i>
+                    <i class="fas fa-window-close"></i>
+                </div>
+            </div>
+            <div class="terminal-window">
+                <div class="statement">
+                    <p class="input">my.story</p>
+                    <p class="return">My journey into tech started with curiosity and a desire to build things that matter. I taught myself to code while working, driven by the belief that technology should solve real problems. Today, I'm a Computer Science student who approaches development with both analytical thinking and creative problem-solving. I work with full-stack development using JavaScript, TypeScript, Node.js, and .NET, but I'm always eager to explore new technologies. With over 3 years of experience in user support and business communication, I've learned how important data management and analysis really are. From helping small businesses organize their finances to optimizing workflows for better efficiency – I solve problems that save time, reduce errors, and make sense of complex information.</p>
+                </div>
+         
+                <div class="statement">
+                    <p class="input">how.can.i.help.you?</p>
+                    <p class="return"><a href="mailto:comnsense17@gmail.com" class="green">Let's talk →</a></p>
+                </div>
+           
+                <div class="statement">
+                    <p class="input bottom"><span></span></p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="terminal-window">
-        <div class="statement">
-            <p class="input">my.story</p>
-            <p class="return">My journey into tech started with curiosity and a desire to build things that matter. I taught myself to code while working, driven by the belief that technology should solve real problems. Today, I'm a Computer Science student who approaches development with both analytical thinking and creative problem-solving. I work with full-stack development using JavaScript, TypeScript, Node.js, and .NET, but I'm always eager to explore new technologies. With over 3 years of experience in user support and business communication, I've learned how important data management and analysis really are. From helping small businesses organize their finances to optimizing workflows for better efficiency – I solve problems that save time, reduce errors, and make sense of complex information.</p>
-        </div>
- 
-        <div class="statement">
-            <p class="input">how.can.i.help.you?</p>
-            <p class="return"><a href="mailto:comnsense17@gmail.com" class="green">Let's talk →</a></p>
-        </div>
-   
-   
-        <div class="statement">
-            <p class="input bottom"><span></span></p>
-        </div>
-    </div>
-</div>
+    </main>
+
     <!-- Footer -->
     <footer class="footer-container">
         <div class="footer-column">        
@@ -1107,50 +1120,14 @@
             // Load theme
             loadSavedTheme();
             
-            const toggle = document.querySelector(".toggle");
-            const menu = document.querySelector(".nav-menu");
-
-            if (toggle && menu) {
-                toggle.addEventListener("click", function() {
-                    if (menu.classList.contains("active")) {
-                        menu.classList.remove("active");
-                        toggle.innerHTML = `<i class="fas fa-bars"></i>`;
-                        document.body.style.overflow = '';
-                    } else {
-                        menu.classList.add("active");
-                        toggle.innerHTML = `<i class="fas fa-times"></i>`;
-                        document.body.style.overflow = 'hidden';
-                    }
-                });
-
-                // Close menu when clicking on a link
-                document.querySelectorAll('.nav-item a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        if (menu.classList.contains('active')) {
-                            menu.classList.remove('active');
-                            toggle.innerHTML = `<i class="fas fa-bars"></i>`;
-                            document.body.style.overflow = '';
-                        }
-                    });
-                });
-
-                // Close menu on window resize
-                window.addEventListener('resize', function() {
-                    if (window.innerWidth > 768 && menu.classList.contains('active')) {
-                        menu.classList.remove('active');
-                        toggle.innerHTML = `<i class="fas fa-bars"></i>`;
-                        document.body.style.overflow = '';
-                    }
-                });
-            }
-
             // Fix for missing images - use CDN fallbacks
             const techImages = document.querySelectorAll('.skill img');
             techImages.forEach(img => {
                 img.addEventListener('error', function() {
-                    // If image fails to load, replace with material icon
                     const parent = this.parentElement;
                     const techName = this.alt;
+                    
+                    // Create material icon fallback
                     const iconMap = {
                         'HTML5': 'code',
                         'CSS3': 'palette',
@@ -1175,13 +1152,13 @@
                         'Unix/Linux': 'terminal'
                     };
                     
+                    // Clear the parent and add fallback
                     if (parent && !parent.querySelector('.material-icons')) {
-                        const iconSpan = document.createElement('span');
-                        iconSpan.className = 'material-icons';
-                        iconSpan.textContent = iconMap[techName] || 'code';
-                        parent.insertBefore(iconSpan, parent.querySelector('span'));
+                        parent.innerHTML = `
+                            <span class="material-icons">${iconMap[techName] || 'code'}</span>
+                            <span>${techName}</span>
+                        `;
                     }
-                    this.style.display = 'none';
                 });
             });
         });
